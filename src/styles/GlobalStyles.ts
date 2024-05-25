@@ -118,10 +118,25 @@ export const Input = styled.input`
 
 //CountryDetails
 
+export const DetailedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin : 20px
+`;
+
+export const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
 
 export const BackButton = styled(Link)`
   display: inline-flex;
-  margin-bottom: 50px;
   padding: 10px 20px;
   background-color: ${(props) => props.theme.colors.element};
   color: ${(props) => props.theme.colors.text};
@@ -132,38 +147,53 @@ export const BackButton = styled(Link)`
   }
 `;
 
+export const Main = styled.main`
+  display: flex;
+  width: 100%;
+`;
+
+export const FlagContainer = styled.section`
+  flex: 0 0 50%;
+  margin-right: 20px;
+  
+`;
+
 export const Flag = styled.img`
   width: 100%;
   max-width: 600px;
   height: auto;
-  margin-bottom: 20px;
 `;
 
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    gap: 40px;
-  }
-`;
-
-export const InfoSection = styled.div`
+export const InfoContainer = styled.section`
   flex: 1;
 `;
 
-export const InfoTitle = styled.h1`
+export const InfoTitle = styled.h2`
+  font-size: 40px;
   margin-bottom: 10px;
 `;
 
+export const InfoGroup = styled.div`
+  margin-bottom: 15px;
+  display : flex;
+`;
+
 export const InfoText = styled.p`
-  margin: 5px 0;
+  margin-bottom: 5px;
 `;
 
 export const BorderCountries = styled.div`
-  margin-top: 0px;
+  margin-top: 20px;
+`;
+
+export const BorderCountriesTitle = styled.h3`
+  margin-bottom: 10px;
+`;
+
+export const BorderCountriesList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
 `;
 
 export const BorderCountry = styled(Link)`
@@ -172,9 +202,9 @@ export const BorderCountry = styled(Link)`
   margin-bottom: 10px;
   padding: 5px 10px;
   background-color: ${(props) => props.theme.colors.element};
-  color: ${(props) => props.theme.colors.text};column
+  color: ${(props) => props.theme.colors.text};
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-decoration: none;row
+  text-decoration: none;
   &:hover {
     background-color: ${(props) => props.theme.colors.background};
   }
